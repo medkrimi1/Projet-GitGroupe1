@@ -5,6 +5,7 @@ import com.esprit.examen.services.ICategorieProduitService;
 import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,6 +23,11 @@ public class ProjectController {
     public List<CategorieProduit> getCategorieProduit() {
         List<CategorieProduit> list = categorieProduitService.retrieveAllCategorieProduits();
         return list;
+    }
+//added by fatma 15/4/2023
+    @GetMapping("/{categorieProduit-id}")
+    public CategorieProduit retrieveCategorieProduit(@PathVariable("categorieProduit-id") Long categorieProduitId) {
+        return categorieProduitService.retrieveCategorieProduit(categorieProduitId);
     }
 
 }
