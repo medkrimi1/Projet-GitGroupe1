@@ -52,5 +52,6 @@ public class CategorieProduitController {
 		return categorieProduitService.updateCategorieProduit(categorieProduit);
 	}
 
-	
+	// added by Manel 
+	String add;
 }
