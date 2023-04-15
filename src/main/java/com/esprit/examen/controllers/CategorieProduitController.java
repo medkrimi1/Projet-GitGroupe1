@@ -49,6 +49,9 @@ public class CategorieProduitController {
 
 	@PutMapping
 	public CategorieProduit modifyCategorieProduit(@RequestBody CategorieProduit categorieProduit) {
+		//added by Manel on 15/04 at 1:34
+		Integer i=0;
+
 		return categorieProduitService.updateCategorieProduit(categorieProduit);
 	}
 
