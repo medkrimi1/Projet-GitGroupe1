@@ -61,11 +61,19 @@ public class FactureRestController {
     }
 
     @GetMapping(value = "/pourcentage-recouvrement/{startDate}/{endDate}")
+<<<<<<< HEAD
     public float pourcentageRecouvremmment(
             @PathVariable(name = "startDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date startDate,
             @PathVariable(name = "endDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date endDate) {
 
             return factureService.pourcentageRecouvremmment(startDate, endDate);
+=======
+    public float pourcentageRecouvrements(
+            @PathVariable(name = "startDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date startDate,
+            @PathVariable(name = "endDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date endDate) {
+
+            return factureService.pourcentageRecouvrements(startDate, endDate);
+>>>>>>> fd1186749b1bf3399f9c0ab68cfc3dea85bdf58f
 
     }
 
