@@ -44,6 +44,11 @@ public class ProjectController {
         CategorieProduit categorieProduit = categorieProduitService.addCategorieProduit(cp);
         return categorieProduit;
     }
+    @DeleteMapping("{categorieProduit-id}")
+    public void removeCategorieProduit(@PathVariable("categorieProduit-id") Long categorieProduitId) {
+        categorieProduitService.deleteCategorieProduit(categorieProduitId);
+    }
+
 
 =======
     
