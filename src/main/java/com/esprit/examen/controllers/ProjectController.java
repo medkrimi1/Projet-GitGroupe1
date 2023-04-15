@@ -23,5 +23,6 @@ public class ProjectController {
         List<CategorieProduit> list = categorieProduitService.retrieveAllCategorieProduits();
         return list;
     }
+    
 
 }
