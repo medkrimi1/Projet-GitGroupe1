@@ -45,12 +45,21 @@ public class CategorieProduitController {
 	@DeleteMapping("{categorieProduit-id}")
 	public void removeCategorieProduit(@PathVariable("categorieProduit-id") Long categorieProduitId) {
 		categorieProduitService.deleteCategorieProduit(categorieProduitId);
-	}
-
-	@PutMapping
-	public CategorieProduit modifyCategorieProduit(@RequestBody CategorieProduit categorieProduit) {
-		return categorieProduitService.updateCategorieProduit(categorieProduit);
+		
+		//added by Mohamed on 15/04 at 1:50
+		Integer i=5;
 	}
 
 	
+
+	@PutMapping
+	public CategorieProduit modifyCategorieProduit(@RequestBody CategorieProduit categorieProduit) {
+		//added by Manel on 15/04 at 1:34
+		Integer i=0;
+
+		return categorieProduitService.updateCategorieProduit(categorieProduit);
+	}
+
+	// added by Manel 
+	String add;
 }

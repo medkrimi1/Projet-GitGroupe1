@@ -43,6 +43,8 @@ public class StockRestController {
 
 	@PutMapping
 	public Stock modifyStock(@RequestBody Stock stock) {
+		// added by Manel
+		Stock s = null;
 		return stockService.updateStock(stock);
 	}
 
