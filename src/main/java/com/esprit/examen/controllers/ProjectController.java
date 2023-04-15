@@ -29,5 +29,11 @@ public class ProjectController {
     public CategorieProduit retrieveCategorieProduit(@PathVariable("categorieProduit-id") Long categorieProduitId) {
         return categorieProduitService.retrieveCategorieProduit(categorieProduitId);
     }
+//added by mohamed
+    @PostMapping
+    public Fournisseur addFournisseur(@RequestBody Fournisseur f) {
+        Fournisseur fournisseur = fournisseurService.addFournisseur(f);
+        return fournisseur;
+    }
 
 }
