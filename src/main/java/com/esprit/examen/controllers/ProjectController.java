@@ -39,6 +39,11 @@ public class ProjectController {
     public Operateur modifyOperateur(@RequestBody Operateur operateur) {
         return operateur;
     }
+    @PostMapping
+    public CategorieProduit addCategorieProduit(@RequestBody CategorieProduit cp) {
+        CategorieProduit categorieProduit = categorieProduitService.addCategorieProduit(cp);
+        return categorieProduit;
+    }
 
 =======
     
