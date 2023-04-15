@@ -49,7 +49,7 @@ public class ProjectController {
         categorieProduitService.deleteCategorieProduit(categorieProduitId);
     }
     @PutMapping
-    public CategorieProduit modifyCategorieProduit(@RequestBody CategorieProduit categorieProduit) {
+    public CategorieProduit modifyCategorieProduitsss(@RequestBody CategorieProduit categorieProduit) {
         return categorieProduitService.updateCategorieProduit(categorieProduit);
     }
 
