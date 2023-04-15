@@ -1,13 +1,11 @@
 package com.esprit.examen.controllers;
 
 import com.esprit.examen.entities.CategorieProduit;
+import com.esprit.examen.entities.Operateur;
 import com.esprit.examen.services.ICategorieProduitService;
 import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
@@ -31,9 +29,15 @@ public class ProjectController {
     }
 //added by mohamed
     @PostMapping
-    public Fournisseur addFournisseur(@RequestBody Fournisseur f) {
-        Fournisseur fournisseur = fournisseurService.addFournisseur(f);
+    public FournisseurRestController addFournisseur(@RequestBody FournisseurRestController f) {
+        FournisseurRestController fournisseur =  FournisseurRestController().addFournisseur(f);
         return fournisseur;
     }
+    // Added By Sarah Ar
+    @PutMapping
+    public Operateur modifyOperateur(@RequestBody Operateur operateur) {
+        return operateur;
+    }
+
 
 }
