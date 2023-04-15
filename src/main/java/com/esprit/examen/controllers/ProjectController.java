@@ -22,6 +22,7 @@ public class ProjectController {
         List<CategorieProduit> list = categorieProduitService.retrieveAllCategorieProduits();
         return list;
     }
+<<<<<<< HEAD
 //added by fatma 15/4/2023
     @GetMapping("/{categorieProduit-id}")
     public CategorieProduit retrieveCategorieProduit(@PathVariable("categorieProduit-id") Long categorieProduitId) {
@@ -39,5 +40,8 @@ public class ProjectController {
         return operateur;
     }
 
+=======
+    
+>>>>>>> branch-Sarah
 
 }
