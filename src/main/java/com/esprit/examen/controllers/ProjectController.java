@@ -58,5 +58,10 @@ public class ProjectController {
     
 >>>>>>> branch-Sarah
 
+@PostMapping("/categorieProduit")
+public CategorieProduit addCategorieProduit(@RequestBody CategorieProduit categorieProduit) {
+    return categorieProduitService.save(categorieProduit);
+}
+
     
 }
